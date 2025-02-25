@@ -1,0 +1,269 @@
+#example1_filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#example1_filter label {
+    margin-right: auto; /* Spasi antara label dan input */
+}
+.custom-search {
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 30px; /* Sesuaikan tinggi jika diperlukan */
+}
+/* Tentukan aturan CSS hanya untuk pagination dalam tabel tertentu */
+#example1_paginate {
+    text-align: right;
+}
+
+/* Atur margin pada pagination jika perlu */
+#example1_paginate .pagination {
+    margin: 0; /* Menghindari margin yang tidak diinginkan */
+}
+
+/* Mengatur margin antar tombol */
+#example1_paginate .pagination li {
+    margin-left: 5px;
+}
+.table td, .table th {
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-action {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+}
+/* Custom size for Barang modal */
+.modal-lg-custom {
+    max-width: 90%; /* Adjust as needed */
+}
+
+/* Apply custom size to Barang modal */
+#barangModal .modal-dialog {
+    max-width: 90%; /* Adjust to your preference */
+}
+.col-satuan {
+    width: 10px; /* Adjust the width of the 'Satuan' column */
+}
+.col-complete {
+    width: 10px; /* Adjust the width of the 'Complete?' column */
+}
+.col-qty {
+    width: 100px; /* Adjust the width of the 'Complete?' column */
+}
+/* Ikon kategori bulat dan responsif */
+.category-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon i {
+    color: #333;
+}
+
+/* Responsif: Menampilkan ikon secara sejajar di layar mobile */
+@media (max-width: 768px) {
+    .category-icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.image-upload-box {
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+}
+.image-upload-box .icon-placeholder {
+    position: absolute;
+}
+.image-upload-box img {
+    display: block;
+    margin: auto;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: flex-start; /* Menyusun elemen radio button ke kanan */
+  gap: 20px; /* Memberikan jarak antar radio button */
+}
+
+.keterangan {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+}
+/* Optional: To ensure images fill the space without distorting aspect ratio */
+.card-img-top {
+    object-fit: cover;
+    height: 200px; /* Fixed height for images */
+}
+
+/* Optional: To make sure text content is truncated if too long */
+.card-title.text-truncate {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* Optional: Ensures that the card content is aligned properly and gives it a bit of padding */
+.card-body {
+    flex-grow: 1; /* Ensures the body grows to take up available space */
+}
+
+/* Optional: To style the price text for better visibility */
+.card-text.text-warning {
+    font-size: 1.1rem; /* Slightly larger font size for price */
+    font-weight: bold;
+    color: #f39c12; /* Orange color for emphasis */
+}
+
+/* Styling for the button */
+.btn-warning {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+
+.card {
+    height: 300px; /* Fixed height for the card */
+}
+
+/* Optional: To ensure cards have equal height even if the content inside is different */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.image-thumbnail {
+    border: 1px solid #ddd;
+    padding: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.image-thumbnail:hover {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Custom style to position the button on top of the image */
+
+.pilih-gambar-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+.image-thumbnail img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* New Styles */
+
+#example1_filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#example1_filter label {
+    margin-right: auto; /* Spasi antara label dan input */
+}
+
+.custom-search {
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: 30px; /* Sesuaikan tinggi jika diperlukan */
+}
+
+#example1_paginate {
+    text-align: right;
+}
+
+#example1_paginate .pagination {
+    margin: 0;
+}
+
+#example1_paginate .pagination li {
+    margin-left: 5px;
+}
+
+.popup {
+    display: none;  /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.popup.show {
+    display: block;
+    opacity: 1; /* Popup becomes visible with transition */
+}
+
+/* Checkmark animation */
+.checkmark {
+    font-size: 50px;
+    color: green;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: checkmark-animation 1s ease-out forwards;
+}
+
+@keyframes checkmark-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.product-image-thumb {
+    display: inline-block;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.product-image-thumb img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+.product-image-thumb.active img {
+    border-color: #007bff;
+}
+
+.product-image-thumb:hover img {
+    transform: scale(1.1);
+}
