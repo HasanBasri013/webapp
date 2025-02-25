@@ -18,6 +18,8 @@ use App\Http\Controllers\UploadController;
 Route::get('/', function () {
     return redirect()->route('login');
 });
+// Default login route yang dihasilkan oleh Laravel
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Auth::routes();
 
@@ -60,9 +62,9 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
         // Route untuk meng-upload gambar
         Route::post('banners/upload', [BannerController::class, 'uploadImage'])->name('banners.uploadImage');
         
-        Route::get('upload', [UploadController::class, 'index'])->name('upload.index');
-        Route::post('upload', [UploadController::class, 'store'])->name('upload.store');
-        Route::delete('upload/{image}', [UploadController::class, 'destroy'])->name('upload.delete');
+        Route::get('/upload', [UploadController::class, 'index'])->name('upload.index');
+        Route::post('/upload', [UploadController::class, 'store'])->name('upload.store');
+        Route::delete('/upload/{image}', [UploadController::class, 'destroy'])->name('upload.delete');
 
     Route::get('/supplier', [SupplierController::class, 'index'])->name('component.supplier');
     Route::get('/suppliers/modal', [SupplierController::class, 'getSuppliersForModal'])->name('component.supplier.modal'); // For the modal AJAX call
