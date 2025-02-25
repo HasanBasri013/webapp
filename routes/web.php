@@ -16,10 +16,8 @@ use App\Http\Controllers\UploadController;
 
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('auth.login'); // Menampilkan view login.blade.php dari folder auth
 });
-// Default login route yang dihasilkan oleh Laravel
-Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 
 Auth::routes();
 
